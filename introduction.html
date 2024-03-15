@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/styles/reset.css">
+    <link rel="stylesheet" href="./resources/styles/introduction.css">
+    <title>Introduction</title>
+</head>
+<body>
+    <main>
+        <div class="title-container">
+            <h1>Hi, I'm <span id="name">Ricardo Guzman</span><br>This is my Portfolio</h1>
+            <a href="">Let me see!</a>
+        </div>
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="blob" width="25%" height="auto">
+            <filter id="blur">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="15"/>
+            </filter>
+            <path fill="rgba(0, 212, 188, 1)" fill-opacity="0.3" d="M68.1,-24.1C75.2,-0.4,58.8,29,38.2,41.3C17.5,53.7,-7.3,49,-28.1,34.8C-48.8,20.7,-65.3,-3,-59.9,-24.3C-54.6,-45.7,-27.3,-64.7,1.6,-65.3C30.5,-65.8,61.1,-47.8,68.1,-24.1Z" transform="translate(100 100)" filter="url(#blur)"/>
+        </svg>
+    </main>
+    <script type="text/javascript">
+        const buttons = document.querySelectorAll('a');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', function(e){
+
+                let x = e.clientX - e.target.offsetLeft;
+                let y = e.clientY - e.target.offsetTop;
+                
+                let ripples = document.createElement('span');
+                ripples.style.left = x + 'px';
+                ripples.style.top = y + 'px';
+                this.appendChild(ripples);
+            })
+        })
+    </script>
+</body>
+</html>
