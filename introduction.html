@@ -10,7 +10,7 @@
 <body>
     <main>
         <div class="title-container">
-            <h1 id="title">Hi, I'm <span id="name">Ricardo Guzman</span><br>This is my Portfolio</h1>
+            <h1 id="title">Hi, I'm <span id="name">Ricardo Guzman</span><br> This is my Portfolio</h1>
             <a href="#">Let me see!</a>
         </div>
     </main>
@@ -29,29 +29,9 @@
                 
                 setTimeout(() => {
                     ripples.remove()
-                }, 1000);
+                }, 750);
             });
-        });
-
-        const title = document.getElementById('title');
-        let charArr = title.textContent.split('');
-        console.log(charArr)
-
-        title.addEventListener('mouseover', () => {
-            for (let i = 0; i < charArr.length; i++){
-                let charInArr = `<span style="transform: translateY(-100px)">${charArr[i]}</span>`;
-                console.log(`This is the first character in Character array: ${charInArr}`);
-                let charInTitle = title.innerHTML[i];
-                console.log(`This is the first character in title array: ${charInTitle}`);
-
-                title.innerHTML[i] = charInArr;
-            }
-        })
-
-        title.addEventListener('mouseout', () => {
-            title.textContent = charArr.join('');
-        })
-
+        }); 
     </script>
 </body>
 </html>

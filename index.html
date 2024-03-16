@@ -1,14 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>My Portfolio</title>
-</head>
-<body>
-    <header class="header">
-        
-    </header>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./resources/styles/reset.css" />
+		<link rel="stylesheet" href="./resources/styles/styles.css" />
+		<title>My Portfolio</title>
+        <script src="./loader.js"></script>
+		<script
+			type="module"
+			src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+		></script>
+		<script
+			nomodule
+			src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+		></script>
+	</head>
+	<body class="preload">
+		<header class="header">
+			<nav class="nav">
+				<img
+					src="./resources/media/RGLogo-removebg-preview.png"
+					alt="Logo"
+					class="logo"
+				/>
+				<ul class="links">
+					<li>About Me</li>
+					<li>Skills</li>
+					<li>Projects</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section class="banner">
+				<div class="banner-description">
+					<h1 class="banner-title">
+						Hi, I'm <span id="ricardo">Ricardo</span>
+					</h1>
+					<p class="banner-subheading"></p>
+				</div>
+				<div class="hero-model">
+					<model-viewer
+						src="./resources/media/model/desk.glb"
+						camera-controls
+						disable-pan
+						disable-zoom
+						interaction-prompt="none"
+						min-camera-orbit="auto 55deg auto"
+						maxk-camera-orbit="auto 92deg auto"
+						field-of-view="35.3deg"
+					></model-viewer>
+				</div>
+			</section>
+		</main>
+		<div class="loader-page">
+			<span class="loader"><span class="loader-inner"></span></span>
+		</div>
+		<canvas class="background-banner"></canvas>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+		<script src="./main.js"></script>
+	</body>
 </html>
