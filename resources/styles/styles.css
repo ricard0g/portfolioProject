@@ -13,18 +13,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: fadeout 1s linear;
-}
-
-@keyframes fadeout {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-        display: none;
-    }
 }
 
 .loader {
