@@ -1,81 +1,6 @@
 /* Font importation */
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
-/* Loader Style */
-.loader-page {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 0;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.loader {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  border: 4px solid #Fff;
-  animation: loader 2s infinite ease;
-}
-
-.loader-inner {
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-  background-color: #fff;
-  animation: loader-inner 2s infinite ease-in;
-}
-
-@keyframes loader {
-  0% {
-    transform: rotate(0deg);
-  }
-  
-  25% {
-    transform: rotate(180deg);
-  }
-  
-  50% {
-    transform: rotate(180deg);
-  }
-  
-  75% {
-    transform: rotate(360deg);
-  }
-  
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes loader-inner {
-  0% {
-    height: 0%;
-  }
-  
-  25% {
-    height: 0%;
-  }
-  
-  50% {
-    height: 100%;
-  }
-  
-  75% {
-    height: 100%;
-  }
-  
-  100% {
-    height: 0%;
-  }
-}
-
 /* Universal Styles */
 html {
 	font-size: 16px;
@@ -86,17 +11,54 @@ body {
 	background-color: #000;
 }
 
-.preload {
-    overflow: hidden;
+.background-banner {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	z-index: -10;
 }
 
-.background-banner {
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    z-index: -10;
+/* Preloader */
+
+.loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: opacity 5s ease-in, visibility 5s ease-in;
+	z-index: 1000;
 }
+
+.loader::after {
+	content: "";
+	width: 2.5vw;
+	height: 5vh;
+	border: 8px solid #565656;
+	border-top-color: #00d4bc;
+	border-radius: 50%;
+	animation: spinning 1s ease infinite;
+}
+
+@keyframes spinning {
+	from {
+		transform: rotate(0turn);
+	}
+	to {
+		transform: rotate(1turn);
+	}
+}
+
+.loader-hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
 /* Navbar styles */
 
 .nav {
@@ -104,13 +66,14 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	max-height: 5%;
-    background-color: #000000b7;
+	background-color: #000000b7;
 }
 
 .logo {
-	max-width: 10%;
+	max-width: 5%;
+  margin: 2% 0 0 2%;
 	height: auto;
-    overflow: hidden;
+	overflow: hidden;
 }
 
 .links {
@@ -127,102 +90,124 @@ body {
 /* Banner */
 
 .banner {
-    position: relative;
-    display: grid;
-    place-items: center;
-    width: 100vw;
-    height: 100vh;
+	position: relative;
+	display: grid;
+	place-items: center;
+	width: 100vw;
+	height: 100vh;
 }
 
 .banner-description {
-    position: absolute;
-    width: 30vw;
-    height: 20vh;
-    margin-top: -60vh;
-    margin-left: -40vw;
-    z-index: 2;
+	position: absolute;
+	width: 30vw;
+	height: 20vh;
+	margin-top: -60vh;
+	margin-left: -40vw;
+	z-index: 2;
 }
 
 .banner-title {
-    color: #f9f9f9f9;
-    font-size: 2.5vw;
-    font-weight: 400;
+	color: #f9f9f9f9;
+	font-size: 2.5vw;
+	font-weight: 400;
 }
 
 #ricardo {
-    color: #00D4BC;
-    font-weight: 600;
-    letter-spacing: 1px;
+	color: #00d4bc;
+	font-weight: 600;
+	letter-spacing: 1px;
 }
 
 .banner-subheading {
-    position: relative;
-    display: inline-block;
-    width: fit-content;
-    margin-top: 2vh;
+	position: relative;
+	display: inline-block;
+	width: fit-content;
+	margin-top: 2vh;
 }
 
 .banner-subheading::before {
-    content: 'Software Developer';
-    color: #00D4BC;
-    font-size: 2.2vw;
-    animation: words 20s infinite;
+	content: "Software Developer";
+	color: #00d4bc;
+	font-size: 2.2vw;
+	animation: words 20s infinite;
 }
 
 .banner-subheading::after {
-    content: '';
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    background-color: #000;
-    padding: 2px;
-    border-left: 2px solid #00D4BC;
-    right: -8px;
-    animation: cursor .8s infinite, typing 20s steps(15) infinite;
+	content: "";
+	position: absolute;
+	width: calc(100% + 8px);
+	height: 100%;
+	background-color: #000;
+	padding: 2px;
+	border-left: 2px solid #00d4bc;
+	right: -8px;
+	animation: cursor 0.8s infinite, typing 20s steps(15) infinite;
 }
 
 @keyframes cursor {
-    to {
-        border-left: 2px solid #00D4BC00;
-    }
+	to {
+		border-left: 2px solid #00d4bc00;
+	}
 }
 
 @keyframes typing {
-    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
-        width: 0;
-    }
-    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
-        width: calc(100% + 8px);
-    }
+	10%,
+	15%,
+	30%,
+	35%,
+	50%,
+	55%,
+	70%,
+	75%,
+	90%,
+	95% {
+		width: 0;
+	}
+	5%,
+	20%,
+	25%,
+	40%,
+	45%,
+	60%,
+	65%,
+	80%,
+	85% {
+		width: calc(100% + 8px);
+	}
 }
 
 @keyframes words {
-    0%, 20% {
-        content: 'Software Developer';
-    }
-    21%, 40% {
-        content: 'Front-End Developer';
-    }
-    41%, 60% {
-        content: 'Web Designer';
-    }
-    61%, 80% {
-        content: 'UX Developer';
-    }
-    81%, 100% {
-        content: 'UI Developer';
-    }
+	0%,
+	20% {
+		content: "Software Developer";
+	}
+	21%,
+	40% {
+		content: "Front-End Developer";
+	}
+	41%,
+	60% {
+		content: "Web Designer";
+	}
+	61%,
+	80% {
+		content: "UX Developer";
+	}
+	81%,
+	100% {
+		content: "UI Developer";
+	}
 }
 
 /* Model Hero */
 
 .hero-model {
-    position: absolute;
-    top: -1vh;
+	position: absolute;
+	top: -1vh;
 }
 
 model-viewer {
-    width: 64vw;
-    height: 95vh;
-    z-index: 3;
+	width: 64vw;
+	height: 95vh;
+	z-index: 3;
 }
