@@ -3,6 +3,8 @@
 const toggle = document.querySelector(".toggle");
 console.log(toggle);
 
+// A good idea is to create two functions, one when the element hasn't been clicked (animation would run), and another when animation has been clicked (animation returns to normal). Saving if the animation ran or not in a boolean variable like "let clicked = false".
+
 toggle.onclick = () => {
 	let topLine = document.querySelector(".top_line");
 	let middleLine = document.querySelector(".middle_line");
