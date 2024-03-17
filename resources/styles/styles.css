@@ -67,11 +67,11 @@ body {
 	align-items: center;
 	max-height: 5%;
 	background-color: #000000b7;
+  padding: 1% 1%;
 }
 
 .logo {
 	max-width: 5%;
-  margin: 2% 0 0 2%;
 	height: auto;
 	overflow: hidden;
 }
@@ -85,6 +85,12 @@ body {
 
 .links li {
 	color: #f9f9f9f9;
+}
+
+.links a {
+  text-decoration: none;
+  color: #f9f9f9f9;
+  font-size: 1rem;
 }
 
 /* Banner */
