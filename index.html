@@ -7,29 +7,29 @@
 		<link rel="stylesheet" href="./resources/styles/styles.css" />
 		<title>My Portfolio</title>
 		<script
-		type="module"
-		src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+			type="module"
+			src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
 		></script>
 		<script
-		nomodule
-		src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+			nomodule
+			src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
 		></script>
 		<script src="./preloader.js"></script>
 		<script src="./main.js" defer></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"
+			defer
+		></script>
 	</head>
 	<body>
 		<div class="loader"></div>
 		<header class="header">
 			<nav class="nav">
-				<img
-					src="./resources/media/logo.png"
-					alt="Logo"
-					class="logo"
-				/>
+				<img src="./resources/media/logo.png" alt="Logo" class="logo" />
 				<ul class="links-desktop">
-					<li><a href="#">About Me</a></li>
-					<li><a href="#">Skills</a></li>
-					<li><a href="#">Projects</a></li>
+					<li class="li1-desktop"><a href="#">About Me</a></li>
+					<li class="li2-desktop"><a href="#">Skills</a></li>
+					<li class="li3-desktop"><a href="#">Projects</a></li>
 				</ul>
 				<div class="toggle">
 					<span class="top_line common"></span>
@@ -70,6 +70,5 @@
 			</section>
 		</main>
 		<canvas class="background-banner"></canvas>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
 	</body>
 </html>
