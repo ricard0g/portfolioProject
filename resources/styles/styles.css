@@ -2,6 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
 /* Universal Styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 html {
 	font-size: 16px;
 	font-family: "Quicksand", sans-serif;
@@ -87,7 +93,6 @@ body {
 	width: 40%;
 }
 
-
 .links-desktop a {
 	position: relative;
 	text-decoration: none;
@@ -148,7 +153,7 @@ body {
 .slide li a {
 	text-decoration: none;
 	color: #f9f9f9f9;
-	font-size: 1.20rem;
+	font-size: 1.2rem;
 	display: block;
 	transition: 0.2s ease-out;
 }
@@ -213,7 +218,7 @@ body {
 	.links-mobile-tablet {
 		display: block;
 	}
-	
+
 	.links-desktop {
 		display: none;
 	}
@@ -222,7 +227,7 @@ body {
 		display: inline-block;
 		position: fixed;
 	}
-} 
+}
 
 @media only screen and (max-width: 500px) {
 	.nav {
@@ -241,7 +246,7 @@ body {
 		display: block;
 		width: 75%;
 	}
-	
+
 	.links-desktop {
 		display: none;
 	}
@@ -268,7 +273,7 @@ body {
 		display: block;
 		width: 98%;
 	}
-	
+
 	.links-desktop {
 		display: none;
 	}
@@ -276,8 +281,7 @@ body {
 	.toggle {
 		display: inline-block;
 	}
-} 
-
+}
 
 /* Banner */
 
@@ -543,4 +547,62 @@ model-viewer {
 		width: 94vw;
 		height: 60vh;
 	}
+}
+
+/* About Me section */
+
+.about-me {
+	position: relative;
+	display: inline-block;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	place-items: center;
+	height: 60vh;
+	width: 100%;
+	padding: 0 10vw;
+	opacity: 0;
+	transform: translateX(-10px) scale(0.9);
+	transition: 0.5s ease;
+}
+
+.up {
+	opacity: 1;
+	transform: translateX(0) scale(1);
+}
+
+.about-me-description {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-content: flex-start;
+	width: 90%;
+	height: 100%;
+}
+
+.about-me-title {
+	font-size: 2.4rem;
+	font-weight: 600;
+	color: #f9f9f9f9;
+}
+
+.about-me-subheading {
+	font-size: 1.4rem;
+	font-weight: 400;
+	color: #a7a9be;
+	margin-top: -10vh;
+}
+
+.photo {
+	display: inline-block;
+	position: relative;
+	width: 50%;
+	overflow: hidden;
+}
+
+.personal-photo {
+	position: relative;
+	max-width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 50px;
 }

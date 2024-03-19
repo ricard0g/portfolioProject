@@ -107,3 +107,17 @@ window.onload = function () {
 		],
 	});
 };
+
+// About Me animation
+
+let aboutMeSection = document.querySelector(".about-me");
+console.log(aboutMeSection);
+const observer = new IntersectionObserver(() => {
+	aboutMeSection.classList.add("up");
+	console.log(`It executed!`)
+}, {
+	root: aboutMeSection,
+	thresholds: 0.7
+})
+
+observer.observe();
