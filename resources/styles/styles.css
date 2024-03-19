@@ -15,7 +15,9 @@ body {
 	position: absolute;
 	display: block;
 	top: 0;
+	bottom: 0;
 	left: 0;
+	right: 0;
 	z-index: -10;
 }
 
@@ -66,7 +68,8 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	max-height: 5%;
-	background-color: #000000b7;
+	background-color: #00000000;
+	backdrop-filter: blur(2px);
 	padding: 1.35% 2%;
 }
 
@@ -74,6 +77,7 @@ body {
 	max-width: 5%;
 	height: auto;
 	overflow: hidden;
+	border-radius: 20%;
 }
 
 .links-desktop {
@@ -83,8 +87,27 @@ body {
 	width: 40%;
 }
 
-.links-desktop li {
+.links-desktop .li1-desktop {
 	color: #f9f9f9f9;
+	transform: translateY(15px);
+	/* opacity: 0; */
+	transition: transform 0.5s ease 1500ms;
+}
+.links-desktop .li2-desktop {
+	color: #f9f9f9f9;
+	transform: translateY(15px);
+	/* opacity: 0; */
+	transition: transform 3s ease 7s;
+}
+.links-desktop .li3-desktop {
+	color: #f9f9f9f9;
+	transform: translateY(15px);
+	/* opacity: 0; */
+	transition: transform 0.5s ease 600ms;
+}
+
+.links-desktop .up {
+	transform: translateY(-30px);
 }
 
 .links-desktop a {
@@ -117,16 +140,18 @@ body {
 
 /* Navbar Mobile-Tablet */
 .links-mobile-tablet {
+	display: none;
 	position: fixed;
 	opacity: 0;
 	height: auto;
-	width: 180px;
-	background-color: #000000;
-	border: 1px solid white; /* Just for a moment */
+	width: 40%;
+	background-color: #00000015;
+	backdrop-filter: blur(10px);
 	right: -40%;
 	top: 2vh;
 	border-radius: 15px;
 	text-align: center;
+	z-index: 10;
 	transition: 0.5s ease;
 }
 
@@ -140,7 +165,7 @@ body {
 }
 
 .slide li {
-	margin: 35% auto;
+	margin: 50% auto;
 }
 
 .slide li a {
@@ -151,18 +176,22 @@ body {
 	transition: 0.2s ease-out;
 }
 
+/* Toggle button */
+
 .toggle {
-	position: absolute;
+	display: none;
+	position: fixed;
 	top: 3vh;
 	right: 3vw;
 	height: 32px;
 	width: 32px;
 	padding: 8px;
-	background-color: #000000;
+	background-color: #00000015;
+	backdrop-filter: blur(10px);
 	cursor: pointer;
 	border-radius: 50%;
-	box-shadow: 0 0 10px rgba(256, 256, 256, 0.4);
-	z-index: 7;
+	box-shadow: 0 0 8px rgba(256, 256, 256, 0.4);
+	z-index: 11;
 }
 
 .toggle .common {
@@ -190,6 +219,87 @@ body {
 	transform: translate(-50%, -50%);
 }
 
+/* Keyframe of the entire navbar. Mobiles and Desktop */
+@media only screen and (max-width: 768px) {
+	.nav {
+		max-height: 10%;
+		background-color: transparent;
+		padding: 3% 3.5%;
+	}
+
+	.logo {
+		max-width: 10%;
+		height: auto;
+		overflow: hidden;
+	}
+
+	.links-mobile-tablet {
+		display: block;
+	}
+	
+	.links-desktop {
+		display: none;
+	}
+
+	.toggle {
+		display: inline-block;
+	}
+} 
+
+@media only screen and (max-width: 500px) {
+	.nav {
+		max-height: 15%;
+		background-color: transparent;
+		padding: 3% 3.5%;
+	}
+
+	.logo {
+		max-width: 15%;
+		height: auto;
+		overflow: hidden;
+	}
+
+	.links-mobile-tablet {
+		display: block;
+		width: 75%;
+	}
+	
+	.links-desktop {
+		display: none;
+	}
+
+	.toggle {
+		display: inline-block;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.nav {
+		max-height: 15%;
+		background-color: transparent;
+		padding: 4.5% 3.5%;
+	}
+
+	.logo {
+		max-width: 20%;
+		height: auto;
+		overflow: hidden;
+	}
+
+	.links-mobile-tablet {
+		display: block;
+		width: 98%;
+	}
+	
+	.links-desktop {
+		display: none;
+	}
+
+	.toggle {
+		display: inline-block;
+	}
+} 
+
 
 /* Banner */
 
@@ -207,7 +317,7 @@ body {
 	height: 20vh;
 	margin-top: -60vh;
 	margin-left: -40vw;
-	z-index: 2;
+	z-index: 0;
 }
 
 .banner-title {
@@ -369,7 +479,46 @@ model-viewer {
 	}
 }
 
+@media only screen and (max-width: 560px) {
+	.banner-description {
+		width: 60vw;
+		margin-left: -25vw;
+		margin-top: -55vh;
+	}
+
+	.banner-title {
+		font-size: 8vw;
+	}
+
+	.banner-subheading::before {
+		font-size: 5.5vw;
+	}
+
+	.hero-model {
+		top: 10vh;
+	}
+
+	model-viewer {
+		width: 98vw;
+		height: 60vh;
+	}
+}
+
 @media only screen and (max-width: 425px) {
+	.banner-description {
+		width: 60vw;
+		margin-left: -25vw;
+		margin-top: -55vh;
+	}
+
+	.banner-title {
+		font-size: 8vw;
+	}
+
+	.banner-subheading::before {
+		font-size: 5.5vw;
+	}
+
 	.hero-model {
 		top: 10vh;
 	}
@@ -381,6 +530,20 @@ model-viewer {
 }
 
 @media only screen and (max-width: 375px) {
+	.banner-description {
+		width: 80vw;
+		margin-left: -5vw;
+		margin-top: -45vh;
+	}
+
+	.banner-title {
+		font-size: 10vw;
+	}
+
+	.banner-subheading::before {
+		font-size: 7.5vw;
+	}
+
 	.hero-model {
 		top: 10vh;
 	}
@@ -391,7 +554,7 @@ model-viewer {
 	}
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 325px) {
 	.hero-model {
 		top: 10vh;
 	}
