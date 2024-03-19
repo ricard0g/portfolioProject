@@ -1,7 +1,6 @@
 // Toggle animation and then the elements part of the toggle animation
 
 const toggle = document.querySelector(".toggle");
-console.log(toggle);
 
 let topLine = document.querySelector(".top_line");
 let middleLine = document.querySelector(".middle_line");
