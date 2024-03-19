@@ -4,19 +4,22 @@ const toggle = document.querySelector(".toggle");
 console.log(toggle);
 
 let topLine = document.querySelector(".top_line");
-	let middleLine = document.querySelector(".middle_line");
-	let bottomLine = document.querySelector(".bottom_line");
-	let sectionSlide = document.querySelector(".links-mobile-tablet");
+let middleLine = document.querySelector(".middle_line");
+let bottomLine = document.querySelector(".bottom_line");
+let sectionSlide = document.querySelector(".links-mobile-tablet");
+let bannerSection = document.querySelector(".banner");
 
 // A good idea is to create two functions, one when the element hasn't been clicked (animation would run), and another when animation has been clicked (animation returns to normal). Saving if the animation ran or not in a boolean variable like "let clicked = false".
 let animOn = false;
 
 const toggleOn = () => {
 	animOn = true;
-
+	
 	//Slide on
-	sectionSlide.style.right = '2vw';
-	sectionSlide.style.opacity = '1';
+	sectionSlide.style.right = "2vw";
+	sectionSlide.style.opacity = "1";
+	//When sidebar is on, .banner goes to the back
+	bannerSection.style.zIndex = "-1";
 	// Top line rotation
 	topLine.style.left = "14.68px";
 	topLine.style.top = "23px";
@@ -30,14 +33,16 @@ const toggleOn = () => {
 	// Middle Line translation in the main axis
 	middleLine.style.opacity = "0";
 	middleLine.style.transform = "translateX(14px)";
-}
+};
 
 const toggleOff = () => {
 	animOn = false;
 
 	// Slide off
-	sectionSlide.style.right = '-40%';
-	sectionSlide.style.opacity = '0';
+	sectionSlide.style.right = "0%";
+	sectionSlide.style.opacity = "0";
+	//When sidebar is off, .banner goes to the front
+	bannerSection.style.zIndex = "0";
 	// Top line rotation
 	topLine.style.left = "50%";
 	topLine.style.top = "35%";
@@ -54,15 +59,15 @@ const toggleOff = () => {
 	middleLine.style.width = "14px";
 	middleLine.style.opacity = "1";
 	middleLine.style.transform = "translate(-50%, -50%)";
-}
+};
 
-toggle.addEventListener('click', () => {
-	if(animOn){
+toggle.addEventListener("click", () => {
+	if (animOn) {
 		toggleOff();
 	} else {
 		toggleOn();
 	}
-})
+});
 
 // Init Particles
 
