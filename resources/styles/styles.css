@@ -561,8 +561,8 @@ model-viewer {
 	width: 100%;
 	padding: 0 10vw;
 	opacity: 0;
-	transform: translateX(-10px) scale(0.9);
-	transition: 0.5s ease;
+	transform: translateX(-20px) scale(0.9);
+	transition: 0.8s ease;
 }
 
 .up {

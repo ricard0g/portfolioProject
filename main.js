@@ -114,10 +114,10 @@ let aboutMeSection = document.querySelector(".about-me");
 console.log(aboutMeSection);
 const observer = new IntersectionObserver(() => {
 	aboutMeSection.classList.add("up");
-	console.log(`It executed!`)
+	console.log(`It executed!`);
 }, {
-	root: aboutMeSection,
-	thresholds: 0.7
+	root: null,
+	thresholds: 1.0,
 })
 
-observer.observe();
+observer.observe(aboutMeSection);
