@@ -1,3 +1,42 @@
+// Init Particles
+
+window.onload = function () {
+	// Normal options Desktop
+	Particles.init({
+		selector: ".background-banner",
+		maxParticles: 200,
+		color: "#565656",
+		connectParticles: false,
+
+		// Responsive Options
+		responsive: [
+			{
+				breakpoint: 1024,
+				options: {
+					maxParticles: 150,
+				},
+			},
+			{
+				breakpoint: 768,
+				options: {
+					maxParticles: 110,
+				},
+			},
+			{
+				breakpoint: 500,
+				options: {
+					maxParticles: 70,
+				},
+			},
+			{
+				breakpoint: 375,
+				options: {
+					maxParticles: 55,
+				},
+			},
+		],
+	});
+};
 // Toggle animation and then the elements part of the toggle animation
 
 const toggle = document.querySelector(".toggle");
@@ -68,56 +107,17 @@ toggle.addEventListener("click", () => {
 	}
 });
 
-// Init Particles
-
-window.onload = function () {
-	// Normal options Desktop
-	Particles.init({
-		selector: ".background-banner",
-		maxParticles: 200,
-		color: "#565656",
-		connectParticles: true,
-
-		// Responsive Options
-		responsive: [
-			{
-				breakpoint: 1024,
-				options: {
-					maxParticles: 150,
-				},
-			},
-			{
-				breakpoint: 768,
-				options: {
-					maxParticles: 110,
-				},
-			},
-			{
-				breakpoint: 500,
-				options: {
-					maxParticles: 70,
-				},
-			},
-			{
-				breakpoint: 375,
-				options: {
-					maxParticles: 55,
-				},
-			},
-		],
-	});
-};
 
 // About Me animation
 
-let aboutMeSection = document.querySelector(".about-me");
-console.log(aboutMeSection);
-const observer = new IntersectionObserver(() => {
-	aboutMeSection.classList.add("up");
-	console.log(`It executed!`);
-}, {
-	root: null,
-	thresholds: 1.0,
-})
+// let aboutMeSection = document.querySelector(".about-me");
+// console.log(aboutMeSection);
+// const observer = new IntersectionObserver(() => {
+// 	aboutMeSection.classList.add("up");
+// 	console.log(`It executed!`);
+// }, {
+// 	root: null,
+// 	thresholds: 1.0,
+// })
 
-observer.observe(aboutMeSection);
+// observer.observe(aboutMeSection);
