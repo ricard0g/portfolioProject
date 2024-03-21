@@ -13,7 +13,7 @@ let animOn = false;
 
 const toggleOn = () => {
 	animOn = true;
-	
+
 	//Slide on
 	sectionSlide.style.right = "2vw";
 	sectionSlide.style.opacity = "1";
@@ -68,17 +68,22 @@ toggle.addEventListener("click", () => {
 	}
 });
 
-
 // About Me animation
 
-// let aboutMeSection = document.querySelector(".about-me");
-// console.log(aboutMeSection);
-// const observer = new IntersectionObserver(() => {
-// 	aboutMeSection.classList.add("up");
-// 	console.log(`It executed!`);
-// }, {
-// 	root: null,
-// 	thresholds: 1.0,
-// })
+let aboutMeSection = document.querySelector(".about-me");
+console.log(aboutMeSection);
 
-// observer.observe(aboutMeSection);
+const intersectionCallback = (entries) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add("up");
+			entry.isIntersecting ? observer.unobserve(entry.target) : null;
+		}
+	});
+};
+
+const observer = new IntersectionObserver(intersectionCallback, {
+	threshold: 0.5,
+});
+
+observer.observe(aboutMeSection);
