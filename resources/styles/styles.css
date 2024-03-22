@@ -577,13 +577,13 @@ model-viewer {
 }
 
 .about-me {
-	position: relative;
 	display: inline-block;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	column-gap: 2vw;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
 	place-items: center;
-	height: 75%;
+	height: 80%;
 	width: 75%;
 	margin: 0 auto;
 	padding: 0 4vw;
@@ -623,12 +623,12 @@ model-viewer {
 	flex-direction: column;
 	justify-content: space-around;
 	align-content: flex-start;
-	width: 100%;
+	width: 50%;
 	height: 75%;
 }
 
 .about-me-title {
-	font-size: 2.5rem;
+	font-size: 2vw;
 	font-weight: 600;
 	color: #f9f9f9f9;
 	margin-bottom: 4vh;
@@ -642,10 +642,10 @@ model-viewer {
 }
 
 .about-me-subheading {
-	font-size: 1.6rem;
-	width: 40ch;
+	font-size: 1.2vw;
+	max-width: 40ch;
 	line-height: 1.5;
-	font-weight: 400;
+	font-weight: 200;
 	color: #f9f9f9f9;
 	margin-top: .5vh;
 }
@@ -656,25 +656,263 @@ model-viewer {
 }
 
 .photo {
-	display: inline-block;
-	position: relative;
-	width: 90%;
-	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	width: 45%;
+	height: 100%;
+	overflow: visible;
 	border-radius: 50px;
-	grid-column: 2 / 4;
 	transition: all 0.5s ease;
 }
 
-.photo:hover {
+
+.personal-photo {
+	width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 50px;
+	margin-top: 8vh;
+	transition: all 0.5s ease;
+}
+
+.personal-photo:hover {
 	box-shadow: 6px 6px 0px 3px rgba(0, 0, 0, 0.7);
 	transform: translateY(-20px);
 }
 
-.personal-photo {
-	position: relative;
-	max-width: 100%;
+.svg-button-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 3%;
+	height: 20%;
+}
+
+.svg-container {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	max-height: 100%;
+	width: 40%;
+}
+
+.svg-container a {
+	margin: 0 3%;
+	width: 15%;
+	clip-path:  border-box circle(90%);
+	transition: all 0.5s ease;
+}
+
+.svg-container a:hover {
+	transform: translateY(-10px);
+}
+
+.svg {
+	width: 100%;
+	transition: all 0.5s ease;
+}
+
+.button-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+	height: 100%;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(90deg, #00D4BC, #268075);
+    width: fit-content;
+    margin: 0 auto;
+    min-height: 3.5vh;
+    padding: 3vh 4vw;
+    text-decoration: none;
+    border-radius: 50px;
+    color: #000000;
+    font-size: 1.3rem;
+    font-weight: 500;
+    box-shadow: 0 0 15px 6px rgba(38, 128, 117, 1);
+    overflow: hidden;
+}
+
+#button-cv {
+	margin: 0 auto;
+	text-align: center;
 	height: auto;
-	display: block;
-	border-radius: 50px;
-	transition: all 0.5 ease;
+	width: 100%;
+	padding: 10%;
+}
+
+.button > span {
+    position: absolute;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animate 750ms linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+    }
+    100% {
+        width: 600px;
+        height: 600px;
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 1220px){
+	.about-me {
+		width: 90%;
+	}
+
+	.about-me-title {
+		font-size: 2rem;
+	}
+
+	.about-me-subheading {
+		font-size: 1.2rem;
+	}
+
+	.button-container {
+		width: 60%;
+	}
+}
+
+@media only screen and (max-width: 912px){
+	.about-me-subheading {
+		font-size: 1.1rem;
+	}
+}
+
+@media only screen and (max-width: 850px) {
+	.about-me-container {
+		height: 100vh;
+		padding: 10%;
+	}
+
+	.about-me {
+		flex-flow: column nowrap;
+		justify-content: space-around;
+		align-content: center;
+		height: 100%;
+		width: 85%;
+		padding: 10%;
+	}
+
+	.about-me-description {
+		width: 100%;
+		margin-top: 2%;
+	}
+
+	.about-me-title {
+		font-size: 1.75rem;
+		text-align: center;
+	}
+
+	.about-me-subheading {
+		font-size: 1rem;
+		text-align: center;
+	}
+
+	.photo {
+		width: 100%;
+		margin-top: 5%;
+	}
+	
+	
+	.personal-photo {
+		max-width: 75%;
+		margin: 0 auto;
+	}
+
+	.svg-button-container {
+		margin: 5% auto;
+	}
+
+	.button-container {
+		height: 70%;
+		width: 60%;
+	}
+
+	#button-cv {
+		padding: 5%;
+	}
+}
+
+@media only screen and (max-width: 674px){
+	.about-me {
+		padding: 6.5%;
+		width: 90%;
+	}
+}
+
+@media only screen and (max-width: 550px){
+	.about-me-container {
+		padding: 10% 6%;
+	}
+	
+	.about-me {
+		padding: 6.5%;
+		width: 95%;
+	}
+
+	.about-me-title {
+		margin-top: 5%;
+		font-size: 1.65rem;
+	}
+	
+	.personal-photo {
+		max-width: 85%;
+		margin: 0 auto;
+	}
+
+	.svg-button-container {
+		flex-direction: column;
+		justify-content: space-around;
+		align-content: center;
+		height: 28%;
+		margin-top: 3%;
+	}
+
+	.svg-container {
+		justify-content: center;
+	}
+
+	.svg-container a {
+		width: 18%;
+	}
+
+	.button-container {
+		height: 50%;
+		width: 60%;
+		margin-top: 5%;
+		margin-bottom: 3%;
+	}
+}
+
+@media only screen and (max-width: 450px){
+	.about-me-container {
+		padding: 10% 4%;
+	}
+
+	.about-me{
+		padding: 5%;
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 375px){
+	.about-me{
+		padding: 3.5%;
+		width: 100%;
+	}
 }

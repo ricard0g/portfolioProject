@@ -1,3 +1,20 @@
+// // Buttons animation
+
+const buttons = document.querySelectorAll(".button");
+buttons.forEach((btn) => {
+	btn.addEventListener("click", function(e) {
+		let x = e.target.clientX - e.target.offsetLeft;
+		let y = e.target.clientY - e.target.offsetTop;
+		let ripples = document.createElement("span");
+		ripples.style.left = x + "px";
+		ripples.style.top = y + "px";
+		this.appendChild(ripples);
+
+		setTimeout(() => {
+			ripples.remove();
+		}, 750);
+	});
+});
 // Toggle animation and then the elements part of the toggle animation
 
 const toggle = document.querySelector(".toggle");
