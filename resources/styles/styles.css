@@ -573,7 +573,8 @@ model-viewer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 80vh;
+	padding-top: 10vh;
+	height: 100vh;
 }
 
 .about-me {
@@ -916,4 +917,46 @@ model-viewer {
 		padding: 3.5%;
 		width: 100%;
 	}
+}
+
+/* Projects Section */
+
+.time-line-section {
+	position: relative;
+	display: grid;
+	place-items: center;
+	width: 100%;
+	height: auto;
+	background-color: #000;
+	background-size: 100vw;
+	padding: 0 10vw;
+	margin: 15vh auto;
+}
+
+.time-line-content {
+	display: grid;
+	place-items: center;
+	width: 100%;
+	padding-bottom: 25vh;
+}
+
+.heading-description {
+	display: grid;
+	place-items: center;
+	margin-bottom: 10vh;
+	margin-left: -50vw;
+}
+
+.time-line-subheading {
+	color: #f9f9f9f9;
+	font-size: 1.35rem;
+	font-weight: 400;
+	padding-bottom: 2vh;
+}
+
+.time-line-heading {
+	color: #f9f9f9f9;
+	margin-left: 50vw;
+	font-size: 2.3125rem;
+	font-weight: 600;
 }
