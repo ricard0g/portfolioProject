@@ -25,7 +25,6 @@ let bottomLine = document.querySelector(".bottom_line");
 let sectionSlide = document.querySelector(".links-mobile-tablet");
 let bannerSection = document.querySelector(".banner");
 
-// A good idea is to create two functions, one when the element hasn't been clicked (animation would run), and another when animation has been clicked (animation returns to normal). Saving if the animation ran or not in a boolean variable like "let clicked = false".
 let animOn = false;
 
 const toggleOn = () => {
@@ -104,3 +103,51 @@ const observer = new IntersectionObserver(intersectionCallback, {
 });
 
 observer.observe(aboutMeSection);
+
+// Timeline Animation
+
+function qs(selector, all = false){
+	return all ? document.querySelectorAll(selector) : document.querySelector(selector);
+}
+
+const sections = qs(".time-line-project", true);
+const timeline = qs(".time-line");
+const line = qs(".line");
+line.style.bottom = `calc(100% - 20px)`;
+let prevScrollY = window.scrollY;
+let up, down;
+let full = false;
+let set = 0;
+const targetY = window.innerHeight * 0.8;
+
+function scrollHandler(e){
+	const { scrollY } = window;
+	up = scrollY < prevScrollY;
+	down = !up;
+	const timelineRect = timeline.getBoundingClientRect();
+	const lineRect = line.getBoundingClientRect();
+
+	const dist = targetY - timelineRect.top;
+
+	if(down && !full){
+		set = Math.max(set, dist);
+		line.style.bottom = `calc(100% - ${set}px)`;
+	}
+	if(dist > timeline.offsetHeight + 50 && !full){
+		full = true;
+		line.style.bottom = `-50px`;
+	}
+
+	sections.forEach((item) => {
+		const rect = item.getBoundingClientRect();
+
+		if (rect.top + item.offsetHeight / 5 < targetY) {
+			item.classList.add("show-me");
+		}
+	});
+	prevScrollY = window.scrollY;
+}
+
+scrollHandler();
+line.style.display = "block";
+window.addEventListener("scroll", scrollHandler);

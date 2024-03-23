@@ -994,7 +994,6 @@ model-viewer {
 
 .time-line-project {
 	display: flex;
-	flex-direction: column;
 	transform: translateX(-50%);
 	transition: 600ms ease;
 	position: relative;
@@ -1004,11 +1003,53 @@ model-viewer {
 	align-items: center;
 	width: 45vw;
 	min-height: 35vh;
-	background-color: #f9f9f9f9;
 	/* opacity: 0; */
 }
 
 .time-line-project:nth-child(odd){
 	flex-direction: row-reverse;
 	transform: translateX(50%);
+}
+
+.mini-circle {
+	position: absolute;
+	display: block;
+	width: 1vw;
+	height: 2.1vh;
+	border-radius: 50%;
+	background-color: #fff;
+	left: 50%;
+	top: 20%;
+	transform: translateX(-50%);
+}
+
+.project-content {
+	width: calc(50% - 2vw);
+	padding: 2vh 2vw;
+	border-radius: 5%;
+	box-shadow: 0 0 10px #fff;
+	overflow: hidden;
+}
+
+.show-me:nth-child(n){
+	transform: none;
+	opacity: 1;
+}
+
+.project-img {
+	max-width: 100%;
+	display: block;
+}
+
+.content-timeline-title {
+	font-size: 1.5rem;
+	color: #f9f9f9f9;
+	margin: 7% auto;
+}
+
+.content-timeline-description {
+	font-size: 1.2rem;
+	color: #f9f9f9f9;
+	margin: 7% auto;
+	line-height: 1.35;
 }
