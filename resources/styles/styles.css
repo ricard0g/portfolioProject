@@ -928,14 +928,14 @@ model-viewer {
 	background-color: #000;
 	background-size: 100vw;
 	padding: 0 10vw;
-	margin: 15vh auto;
+	margin: 10vh auto;
 }
 
 .time-line-content {
 	display: grid;
 	place-items: center;
 	width: 100%;
-	padding-bottom: 25vh;
+	padding-bottom: 20vh;
 }
 
 .heading-description {
@@ -1174,4 +1174,70 @@ model-viewer {
 		border: 1.5px solid #00d4bc;
 		box-shadow: 0 0 3px #00d4bc;
 	}
+}
+
+/* Skills Section */
+
+.skills-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-content: center;
+	width: 60%;
+	height: auto;
+	margin: 5% auto;
+}
+
+.skills-title {
+	text-align: center;
+	margin: 7% auto;
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: #f9f9f9f9;
+}
+
+.skills-big-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.skill-container {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	width: 20%;
+	margin: 0 auto;
+}
+
+.skill-container::before {
+	content: '';
+	position: absolute;
+	width: 8%;
+	height: 14.5%;
+	z-index: -1;
+	background-color: #00d4bc;
+	border-radius: 20px;
+}
+
+.skill-container::after {
+	content: '';
+	position: absolute;
+	width: 7.95%;
+	height: 14.25%;
+	z-index: -1;
+	background-color: #00000086;
+	border-radius: 20px;
+}
+
+.skill-img {
+
+	margin: 4% auto 0 auto;
+	max-width: 50%;
+}
+
+#js-img {
+	max-width: 45%;
+	margin-top: 4%;
 }
