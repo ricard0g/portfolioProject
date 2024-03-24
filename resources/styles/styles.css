@@ -1185,7 +1185,7 @@ model-viewer {
 	align-content: center;
 	width: 60%;
 	height: auto;
-	margin: 5% auto;
+	margin: 0 auto 10% auto;
 }
 
 .skills-title {
@@ -1204,40 +1204,48 @@ model-viewer {
 }
 
 .skill-container {
+	position: relative;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
-	align-content: center;
-	width: 20%;
+	align-items: center;
+	padding: 8px;
+	width: 15%;
 	margin: 0 auto;
+	opacity: 0.5;
+	transition: 0.3s ease;
 }
 
-.skill-container::before {
-	content: '';
-	position: absolute;
-	width: 8%;
-	height: 14.5%;
-	z-index: -1;
-	background-color: #00d4bc;
-	border-radius: 20px;
+.skill-container:hover {
+	opacity: 1;
 }
 
 .skill-container::after {
 	content: '';
 	position: absolute;
-	width: 7.95%;
-	height: 14.25%;
+	top: 8px;
+	min-width: 65%;
+	min-height: 98%;
 	z-index: -1;
-	background-color: #00000086;
+	background-color: #141414;
 	border-radius: 20px;
 }
 
 .skill-img {
-
 	margin: 4% auto 0 auto;
 	max-width: 50%;
 }
 
 #js-img {
 	max-width: 45%;
-	margin-top: 4%;
+}
+
+/* Certifications Section */
+
+.certification-item header {
+	width: 100%;
+}
+
+.certification-item header img {
+	max-width: 20%;
 }
