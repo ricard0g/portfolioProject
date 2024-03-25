@@ -1199,8 +1199,10 @@ model-viewer {
 .skills-big-container {
 	display: flex;
 	flex-wrap: wrap;
+	flex-basis: 1;
 	justify-content: center;
 	align-items: center;
+	height: auto;
 }
 
 .skill-container {
@@ -1210,8 +1212,8 @@ model-viewer {
 	justify-content: center;
 	align-items: center;
 	padding: 8px;
-	width: 15%;
-	margin: 0 auto;
+	width: 157px;
+	margin: 2.5% auto;
 	opacity: 0.5;
 	transition: 0.3s ease;
 }
@@ -1224,8 +1226,8 @@ model-viewer {
 	content: '';
 	position: absolute;
 	top: 8px;
-	min-width: 65%;
-	min-height: 98%;
+	width: 130px;
+	height: 95px;
 	z-index: -1;
 	background-color: #141414;
 	border-radius: 20px;
@@ -1233,11 +1235,11 @@ model-viewer {
 
 .skill-img {
 	margin: 4% auto 0 auto;
-	max-width: 50%;
+	max-width: 76px;
 }
 
 #js-img {
-	max-width: 45%;
+	max-width: 76px;
 }
 
 /* Certifications Section */
