@@ -30,9 +30,9 @@
 			<nav class="nav">
 				<img src="./resources/media/logo.png" alt="Logo" class="logo" />
 				<ul class="links-desktop">
-					<li id="li1-desktop" class="up"><a href="#">About Me</a></li>
-					<li id="li2-desktop" class=""><a href="#">Projects</a></li>
-					<li id="li3-desktop" class=""><a href="#">Certifications</a></li>
+					<li id="li1-desktop" class="up"><a href="#about-me">About Me</a></li>
+					<li id="li2-desktop" class=""><a href="#timeline">Projects</a></li>
+					<li id="li3-desktop" class=""><a href="#certifications">Certifications</a></li>
 				</ul>
 				<div class="toggle">
 					<span class="top_line common"></span>
@@ -42,9 +42,9 @@
 				<section class="links-mobile-tablet">
 					<div class="slide">
 						<ul>
-							<li><a href="#">About Me</a></li>
-							<li><a href="#">Projects</a></li>
-							<li><a href="#">Certifications</a></li>
+							<li><a href="#about-me">About Me</a></li>
+							<li><a href="#timeline">Projects</a></li>
+							<li><a href="#certifications">Certifications</a></li>
 						</ul>
 					</div>
 				</section>
@@ -81,7 +81,7 @@
 				<div id="particles-js"></div>
 			</section>
 			<!-- About Me section -->
-			<section class="about-me-container">
+			<section class="about-me-container" id="about-me">
 				<section class="about-me">
 					<!-- About me title and subheading -->
 					<div class="about-me-description">
@@ -113,19 +113,19 @@
 							<div class="svg-container">
 								<a
 									href="http://www.linkedin.com/in/ricardo-guzman-duran-a09b62176"
-									target="_blank"
+									target="_blank" title="Link to my Linkedin"
 									><img
 										src="./resources/media/linkedin-logo-svgrepo-com.svg"
 										alt="linkedin icon"
 										class="svg"
 								/></a>
-								<a href="http://ricardoguzman444@gmail.com" target="_blank"
+								<a href="http://ricardoguzman444@gmail.com" target="_blank" title="Link to my email"
 									><img
 										src="./resources/media/bxl-gmail.svg"
 										alt="gmail icon"
 										class="svg"
 								/></a>
-								<a href="https://github.com/ricard0g" target="_blank"
+								<a href="https://github.com/ricard0g" target="_blank" title="Link to my GitHub"
 									><img
 										src="./resources/media/bxl-github.svg"
 										alt="github icon"
@@ -137,7 +137,7 @@
 									href="./resources/media/cv/CV.pdf"
 									class="button"
 									id="button-cv"
-									target="_blank"
+									target="_blank" title="Download my Curriculum Vitae"
 									>Download CV</a
 								>
 							</div>
@@ -146,7 +146,7 @@
 				</section>
 			</section>
 			<!-- Time Line section -->
-			<section class="time-line-section">
+			<section class="time-line-section" id="timeline">
 				<section class="time-line-content">
 					<!-- Timeline Heading and Subheading -->
 					<div class="heading-description">
@@ -172,7 +172,7 @@
 									</p>
 								</main>
 								<footer>
-									<a href="https://ricard0g.github.io/codecademyProjects/starting/" class="link-to-page" target="_blank">Visit</a>
+									<a href="https://ricard0g.github.io/codecademyProjects/starting/" class="link-to-page" target="_blank" title="Visit this project">Visit</a>
 								</footer>
 							</article>
 						</div>
@@ -191,7 +191,7 @@
 									</p>
 								</main>
 								<footer>
-									<a href="https://ricard0g.github.io/codecademyProjects/number-guesser-starting/" target="_blank" class="link-to-page">Visit</a>
+									<a href="https://ricard0g.github.io/codecademyProjects/number-guesser-starting/" target="_blank" class="link-to-page" title="Visit this project">Visit</a>
 								</footer>
 							</article>
 						</div>
@@ -212,7 +212,7 @@
 									</p>
 								</main>
 								<footer>
-									<a href="https://ricard0g.github.io/html-css-cheatsheet_codecademy/" target="_blank" class="link-to-page">Visit</a>
+									<a href="https://ricard0g.github.io/html-css-cheatsheet_codecademy/" target="_blank" class="link-to-page" title="Visit this project">Visit</a>
 								</footer>
 							</article>
 						</div>
@@ -231,7 +231,7 @@
 									</p>
 								</main>
 								<footer>
-									<a href="https://ricard0g.github.io/codecademyProjects/flexbox-business-site-starting/" target="_blank" class="link-to-page">Visit</a>
+									<a href="https://ricard0g.github.io/codecademyProjects/flexbox-business-site-starting/" target="_blank" class="link-to-page" title="Visit this project">Visit</a>
 								</footer>
 							</article>
 						</div>
@@ -250,7 +250,7 @@
 									</p>
 								</main>
 								<footer>
-									<a href="https://ricard0g.github.io/codecademyProjects/website-design-system-starting/" target="_blank" class="link-to-page">Visit</a>
+									<a href="https://ricard0g.github.io/codecademyProjects/website-design-system-starting/" target="_blank" class="link-to-page" title="Visit this project">Visit</a>
 								</footer>
 							</article>
 						</div>
@@ -277,13 +277,13 @@
 					</figure>
 				</div>
 			</section>
-			<section class="certifications-section">
+			<section class="certifications-section" id="certifications">
 				<h3 class="certifications-title">Certifications</h3>
 				<p class="certifications-subheading">Almost everything I've learned has been self-taught. These are some of the Online certifications I've collected during my coding journey that started around 4 months ago.</p>
 				<div class="grid-container">
 					<article class="certification-item js">
 						<header>
-							<a href="https://www.freecodecamp.org/certification/fccc69470dd-5d59-40de-a395-669c068ccc92/javascript-algorithms-and-data-structures" class="img-link" target="_blank">
+							<a href="https://www.freecodecamp.org/certification/fccc69470dd-5d59-40de-a395-669c068ccc92/javascript-algorithms-and-data-structures" class="img-link" target="_blank" title="Go to this certification">
 								<img src="resources/media/FCC-javascript-certification.webp" alt="JavaScript Certification of completion">
 							</a>
 						</header>
@@ -294,7 +294,7 @@
 					</article>
 					<article class="certification-item twilio">
 						<header>
-							<a href="https://www.linkedin.com/learning/certificates/9f98754be00a140a4508e9b8bcb2a14003962a02610d21268814160062b8ae37?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BWy1OoZdlSyeYpqgHuiuoNA%3D%3D" class="img-link" target="_blank">
+							<a href="https://www.linkedin.com/learning/certificates/9f98754be00a140a4508e9b8bcb2a14003962a02610d21268814160062b8ae37?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BWy1OoZdlSyeYpqgHuiuoNA%3D%3D" class="img-link" target="_blank" title="Go to this certification">
 								<img src="resources/media/twilio-certification.webp" alt="Twilio Programmable messaging and Voice certification">
 							</a>
 						</header>
@@ -305,7 +305,7 @@
 					</article>
 					<article class="certification-item backend">
 						<header>
-							<a href="https://www.freecodecamp.org/certification/fccc69470dd-5d59-40de-a395-669c068ccc92/back-end-development-and-apis" class="img-link" target="_blank">
+							<a href="https://www.freecodecamp.org/certification/fccc69470dd-5d59-40de-a395-669c068ccc92/back-end-development-and-apis" class="img-link" target="_blank" title="Go to this certification">
 								<img src="resources/media/FCC-Backend-certification.webp" alt="Backend and APIs certification">
 							</a>
 						</header>
@@ -316,7 +316,7 @@
 					</article>
 					<article class="certification-item microservices">
 						<header>
-							<a href="https://www.linkedin.com/learning/certificates/6544995bec7ff9902df56f931ac15f59920587e017cae6d35f795eac8208b466?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BWy1OoZdlSyeYpqgHuiuoNA%3D%3D" class="img-link" target="_blank">
+							<a href="https://www.linkedin.com/learning/certificates/6544995bec7ff9902df56f931ac15f59920587e017cae6d35f795eac8208b466?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BWy1OoZdlSyeYpqgHuiuoNA%3D%3D" class="img-link" target="_blank" title="Go to this certification">
 								<img src="resources/media/microservices-certification.webp" alt="Certification in Microservices">
 							</a>
 						</header>
@@ -331,7 +331,7 @@
 				<a href="mailto:ricardoguzman444@gmail.com" title="Send me an email" target="_blank" class="button" id="contact-me-button">Send me an Email!</a>
 			</section>
 		</main>
-		<footer>
+		<footer class="footer">
 			<p>made by Ricardo Arturo Guzman Duran</p>
 			<p><a href="http://" target="_blank" title="Visit ricard0g in GitHub">ricard0g</a> in GitHub</p>
 		</footer>
