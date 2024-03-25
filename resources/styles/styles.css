@@ -132,7 +132,7 @@ canvas {
 	background-color: #00d4bc;
 	border-radius: 50px;
 	transform: scaleX(0);
-	transition: transform 0.2s linear;
+	transition: transform 0.1s linear;
 }
 
 .links-desktop a:hover::before {
