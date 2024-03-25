@@ -734,7 +734,7 @@ model-viewer {
 	text-decoration: none;
 	border-radius: 50px;
 	color: #000000;
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	font-weight: 500;
 	box-shadow: 0 0 15px 6px rgba(38, 128, 117, 1);
 	overflow: hidden;
@@ -1229,7 +1229,7 @@ model-viewer {
 	width: 130px;
 	height: 95px;
 	z-index: -1;
-	background-color: #141414;
+	background-color: #2b2b2b;
 	border-radius: 20px;
 }
 
@@ -1274,7 +1274,7 @@ model-viewer {
 	grid-template-areas:
 		"js twilio"
 		"backend microservices";
-		gap: 2% 2%;
+	gap: 2% 2%;
 }
 
 .js {
@@ -1295,8 +1295,29 @@ model-viewer {
 
 .certification-item {
 	padding: 2%;
-	border: 1px solid white;
+	background: hsla(0, 0%, 0%, 1);
+	background: linear-gradient(
+		45deg,
+		hsla(0, 0%, 0%, 1) 0%,
+		hsla(173, 100%, 15%, 1) 100%
+	);
+	background: -moz-linear-gradient(
+		45deg,
+		hsla(0, 0%, 0%, 1) 0%,
+		hsla(173, 100%, 15%, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		45deg,
+		hsla(0, 0%, 0%, 1) 0%,
+		hsla(173, 100%, 15%, 1) 100%
+	);
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#000000", endColorstr="#004E45", GradientType=1 );
 	border-radius: 20px;
+	transition: 150ms ease;
+}
+
+.certification-item:hover {
+	box-shadow: 0 0 20px 4px hsl(173, 100%, 15%);
 }
 
 .certification-item header {
@@ -1305,7 +1326,7 @@ model-viewer {
 }
 
 .certification-item header::after {
-	content: 'Check Certification';
+	content: "Check Certification";
 	top: 45%;
 	left: 32.5%;
 	position: absolute;
@@ -1343,6 +1364,6 @@ model-viewer {
 .certification-item main p {
 	margin: 3% auto;
 	max-width: 75%;
-	font-size: .9rem;
+	font-size: 0.9rem;
 	color: #f9f9f9ea;
 }
