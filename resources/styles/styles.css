@@ -1254,10 +1254,11 @@ model-viewer {
 	text-align: center;
 	width: 100%;
 	height: auto;
+	margin: 20% auto;
 }
 
 .certifications-title {
-	margin: 2% auto;
+	margin: 4% auto;
 	font-size: 1.5rem;
 	font-weight: 600;
 	color: #f9f9f9f9;
@@ -1403,6 +1404,7 @@ model-viewer {
 
 	.certification-item main p {
 		font-size: 0.6rem;
+		max-width: 85%;
 	}
 }
 
@@ -1427,11 +1429,16 @@ model-viewer {
 @media only screen and (max-width: 425px){
 	.certification-item main p {
 		font-size: .75rem;
+		max-width: 90%;
 	}
 }
 
 @media only screen and (max-width: 375px){
 	.grid-container {
 		width: 90%;
+	}
+
+	.certifications-subheading {
+		font-size: .7rem;
 	}
 }
