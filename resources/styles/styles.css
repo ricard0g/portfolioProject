@@ -1242,6 +1242,12 @@ model-viewer {
 	max-width: 76px;
 }
 
+@media only screen and (max-width: 768px){
+	.skill-container {
+		opacity: 1;
+	}
+}
+
 /* Certifications Section */
 
 .certifications-section {
@@ -1366,4 +1372,66 @@ model-viewer {
 	max-width: 75%;
 	font-size: 0.9rem;
 	color: #f9f9f9ea;
+}
+
+@media only screen and (max-width: 1024px){
+	.grid-container {
+		width: 70%;
+	}
+}
+
+@media only screen and (max-width: 860px){
+	.certifications-subheading {
+		font-size: 1rem;
+		width: 40ch;
+	}
+
+	.grid-container {
+		width: 80%;
+	}
+}
+
+@media only screen and (max-width: 650px){
+	.certifications-subheading {
+		font-size: .8rem;
+		width: 40ch;
+	}
+
+	.grid-container {
+		width: 90%;
+	}
+
+	.certification-item main p {
+		font-size: 0.6rem;
+	}
+}
+
+@media only screen and (max-width: 500px){
+	.grid-container {
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: space-around;
+		align-content: center;
+		width: 70%;
+	}
+
+	.certification-item {
+		margin: 5% auto;
+	}
+
+	.certification-item main p {
+		font-size: .85rem;
+	}
+}
+
+@media only screen and (max-width: 425px){
+	.certification-item main p {
+		font-size: .75rem;
+	}
+}
+
+@media only screen and (max-width: 375px){
+	.grid-container {
+		width: 90%;
+	}
 }
