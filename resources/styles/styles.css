@@ -1109,7 +1109,7 @@ model-viewer {
 	}
 }
 
-@media only screen and (max-width: 850px){
+@media only screen and (max-width: 850px) {
 	.time-line-section {
 		padding: 0 3.75%;
 	}
@@ -1123,7 +1123,7 @@ model-viewer {
 	}
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 768px) {
 	.time-line-project {
 		z-index: 3;
 	}
@@ -1131,7 +1131,7 @@ model-viewer {
 	.mini-circle {
 		top: -8%;
 	}
-	
+
 	.project-content {
 		width: 100%;
 		padding: 5% 1%;
@@ -1139,23 +1139,23 @@ model-viewer {
 	}
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 500px) {
 	.time-line-section {
 		padding: 0 2%;
 	}
-	
+
 	.time-line-subheading {
 		font-size: 1rem;
 		padding-bottom: 2vh;
 	}
-	
+
 	.time-line-heading {
 		font-size: 1.9rem;
 	}
 
 	.project-content {
 		border: 2px solid #00d4bc;
-		box-shadow: 0 0 3px .5px #00d4bc;
+		box-shadow: 0 0 3px 0.5px #00d4bc;
 		padding-bottom: 7%;
 	}
 
@@ -1223,7 +1223,7 @@ model-viewer {
 }
 
 .skill-container::after {
-	content: '';
+	content: "";
 	position: absolute;
 	top: 8px;
 	width: 130px;
@@ -1244,10 +1244,65 @@ model-viewer {
 
 /* Certifications Section */
 
+.certifications-section {
+	text-align: center;
+	width: 100%;
+	height: auto;
+}
+
+.certifications-title {
+	margin: 2% auto;
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: #f9f9f9f9;
+}
+
+.certifications-subheading {
+	margin: 0 auto 5% auto;
+	font-size: 1.25rem;
+	font-weight: 200;
+	color: #f9f9f9f9;
+	max-width: 65ch;
+}
+
+.grid-container {
+	display: grid;
+	margin: 5% auto;
+	width: 50%;
+	height: 70vh;
+	grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+	grid-template-areas:
+		"js twilio"
+		"backend microservices";
+		gap: 2% 2%;
+}
+
+.js {
+	grid-area: js;
+}
+
+.twilio {
+	grid-area: twilio;
+}
+
+.backend {
+	grid-area: backend;
+}
+
+.microservices {
+	grid-area: microservices;
+}
+
+.certification-item {
+	padding: 2%;
+	border: 1px solid white;
+	border-radius: 20px;
+}
+
 .certification-item header {
 	width: 100%;
 }
 
 .certification-item header img {
-	max-width: 20%;
+	max-width: 50%;
 }
