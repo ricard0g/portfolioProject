@@ -1255,7 +1255,7 @@ model-viewer {
 	text-align: center;
 	width: 100%;
 	height: auto;
-	margin: 20% auto;
+	margin: 0 auto 15% auto;
 }
 
 .certifications-title {
@@ -1282,7 +1282,7 @@ model-viewer {
 	grid-template-areas:
 		"js twilio"
 		"backend microservices";
-	gap: 2% 2%;
+	gap: 7.5% 7.5%;
 }
 
 .js {
@@ -1444,5 +1444,33 @@ model-viewer {
 	}
 }
 
-/* Form Section */
+/* Contact Me Section */
 
+.contact-me {
+	text-align: center;
+	margin: 10% auto;
+}
+
+#contact-me-button {
+	margin: 0 auto;
+}
+
+@media only screen and (max-width: 500px){
+	#contact-me-button {
+		font-size: 1rem;
+	}
+}
+
+@media only screen and (max-width: 425px){
+	#contact-me-button {
+		font-size: .9rem;
+		padding: 3vh 5vw;
+	}
+}
+
+/* Footer */
+
+footer {
+	width: 100%;
+	
+}
