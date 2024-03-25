@@ -1269,7 +1269,7 @@ model-viewer {
 	display: grid;
 	margin: 5% auto;
 	width: 50%;
-	height: 70vh;
+	height: auto;
 	grid-template: repeat(2, 1fr) / repeat(2, 1fr);
 	grid-template-areas:
 		"js twilio"
@@ -1300,9 +1300,49 @@ model-viewer {
 }
 
 .certification-item header {
+	position: relative;
 	width: 100%;
 }
 
+.certification-item header::after {
+	content: 'Check Certification';
+	top: 45%;
+	left: 32.5%;
+	position: absolute;
+	color: #f9f9f9f9;
+	font-size: 1vw;
+	padding: 1%;
+	background-color: #0000007c;
+	border-radius: 50px;
+	text-align: center;
+	z-index: 1;
+	opacity: 0;
+	transition: 0.4s ease;
+}
+
+.certification-item header:hover::after {
+	opacity: 1;
+}
+
 .certification-item header img {
-	max-width: 50%;
+	position: relative;
+	top: 10px;
+	margin: auto;
+	max-width: 75%;
+	opacity: 0.8;
+}
+
+.certification-item header img:hover {
+	opacity: 0.5;
+}
+
+.certification-item main {
+	margin: 10% auto 5% auto;
+}
+
+.certification-item main p {
+	margin: 3% auto;
+	max-width: 75%;
+	font-size: .9rem;
+	color: #f9f9f9ea;
 }
