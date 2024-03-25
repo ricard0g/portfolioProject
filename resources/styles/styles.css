@@ -1213,7 +1213,7 @@ model-viewer {
 	align-items: center;
 	padding: 8px;
 	width: 157px;
-	margin: 2.5% auto;
+	margin: 4% auto;
 	opacity: 0.5;
 	transition: 0.3s ease;
 }
@@ -1245,6 +1245,7 @@ model-viewer {
 @media only screen and (max-width: 768px){
 	.skill-container {
 		opacity: 1;
+		margin: 7.5% auto;
 	}
 }
 
@@ -1442,3 +1443,6 @@ model-viewer {
 		font-size: .7rem;
 	}
 }
+
+/* Form Section */
+
