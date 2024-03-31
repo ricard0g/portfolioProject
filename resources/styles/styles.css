@@ -152,7 +152,6 @@ canvas {
 	top: 2vh;
 	border-radius: 15px;
 	text-align: center;
-	z-index: 10;
 	transition: 0.5s ease;
 }
 
