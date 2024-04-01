@@ -33,6 +33,7 @@ const toggleOn = () => {
 	//Slide on
 	sectionSlide.style.right = "2vw";
 	sectionSlide.style.opacity = "1";
+	sectionSlide.style.zIndex = "10";
 	//When sidebar is on, .banner goes to the back
 	bannerSection.style.zIndex = "-1";
 	// Top line rotation
@@ -56,6 +57,7 @@ const toggleOff = () => {
 	// Slide off
 	sectionSlide.style.right = "0%";
 	sectionSlide.style.opacity = "0";
+	sectionSlide.style.zIndex = "0"; // --> This might not be needed. If needed also check if it's needed to determine the z-index in CSS to default to zero
 	//When sidebar is off, .banner goes to the front
 	bannerSection.style.zIndex = "0";
 	// Top line rotation
